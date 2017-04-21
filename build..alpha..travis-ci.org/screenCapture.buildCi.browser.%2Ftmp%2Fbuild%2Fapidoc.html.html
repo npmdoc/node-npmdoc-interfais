@@ -1,0 +1,3162 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://0x.ee">interfais (v1.0.0)</a>
+</h1>
+<h4>Framework to quickly create your own terminal GUI.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais">module interfais</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.interfais">
+            function <span class="apidocSignatureSpan"></span>interfais
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Cell">
+            function <span class="apidocSignatureSpan">interfais.</span>Cell
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.ConfigurableObject">
+            function <span class="apidocSignatureSpan">interfais.</span>ConfigurableObject
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.FocusManager">
+            function <span class="apidocSignatureSpan">interfais.</span>FocusManager
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.FocusableObject">
+            function <span class="apidocSignatureSpan">interfais.</span>FocusableObject
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Layout">
+            function <span class="apidocSignatureSpan">interfais.</span>Layout
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject">
+            function <span class="apidocSignatureSpan">interfais.</span>RecursiveObject
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Row">
+            function <span class="apidocSignatureSpan">interfais.</span>Row
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.</span>Cell.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.</span>ConfigurableObject.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.</span>FocusableObject.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.</span>Layout.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.</span>RecursiveObject.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.</span>Row.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.</span>paintHelper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.</span>renderHelper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.</span>stringHelper</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.Cell">module interfais.Cell</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Cell.Cell">
+            function <span class="apidocSignatureSpan">interfais.</span>Cell
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.Cell.prototype">module interfais.Cell.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Cell.prototype.availableSpace">
+            function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>availableSpace
+            <span class="apidocSignatureSpan">(parentSize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Cell.prototype.blur">
+            function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>blur
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Cell.prototype.focus">
+            function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>focus
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Cell.prototype.prerender">
+            function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>prerender
+            <span class="apidocSignatureSpan">(confinement, previousSibling)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Cell.prototype.render">
+            function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Cell.prototype.setView">
+            function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>setView
+            <span class="apidocSignatureSpan">(view, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>children</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>parent</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.ConfigurableObject">module interfais.ConfigurableObject</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.ConfigurableObject.ConfigurableObject">
+            function <span class="apidocSignatureSpan">interfais.</span>ConfigurableObject
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.ConfigurableObject.prototype">module interfais.ConfigurableObject.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.ConfigurableObject.prototype.get">
+            function <span class="apidocSignatureSpan">interfais.ConfigurableObject.prototype.</span>get
+            <span class="apidocSignatureSpan">(attrName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.ConfigurableObject.prototype.set">
+            function <span class="apidocSignatureSpan">interfais.ConfigurableObject.prototype.</span>set
+            <span class="apidocSignatureSpan">(attrName, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.FocusManager">module interfais.FocusManager</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.FocusManager.FocusManager">
+            function <span class="apidocSignatureSpan">interfais.</span>FocusManager
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.FocusManager.FocusableObject">
+            function <span class="apidocSignatureSpan">interfais.FocusManager.</span>FocusableObject
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.FocusableObject">module interfais.FocusableObject</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.FocusableObject.FocusableObject">
+            function <span class="apidocSignatureSpan">interfais.</span>FocusableObject
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.FocusableObject.prototype">module interfais.FocusableObject.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.FocusableObject.prototype.blur">
+            function <span class="apidocSignatureSpan">interfais.FocusableObject.prototype.</span>blur
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.FocusableObject.prototype.confirm">
+            function <span class="apidocSignatureSpan">interfais.FocusableObject.prototype.</span>confirm
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.FocusableObject.prototype.enter">
+            function <span class="apidocSignatureSpan">interfais.FocusableObject.prototype.</span>enter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.FocusableObject.prototype.escape">
+            function <span class="apidocSignatureSpan">interfais.FocusableObject.prototype.</span>escape
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.FocusableObject.prototype.focus">
+            function <span class="apidocSignatureSpan">interfais.FocusableObject.prototype.</span>focus
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.Layout">module interfais.Layout</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Layout.Layout">
+            function <span class="apidocSignatureSpan">interfais.</span>Layout
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.Layout.prototype">module interfais.Layout.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Layout.prototype.availableSpace">
+            function <span class="apidocSignatureSpan">interfais.Layout.prototype.</span>availableSpace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Layout.prototype.prerender">
+            function <span class="apidocSignatureSpan">interfais.Layout.prototype.</span>prerender
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Layout.prototype.render">
+            function <span class="apidocSignatureSpan">interfais.Layout.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.Layout.prototype.</span>children</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.Layout.prototype.</span>parent</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.RecursiveObject">module interfais.RecursiveObject</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject.RecursiveObject">
+            function <span class="apidocSignatureSpan">interfais.</span>RecursiveObject
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.RecursiveObject.prototype">module interfais.RecursiveObject.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject.prototype.addChild">
+            function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>addChild
+            <span class="apidocSignatureSpan">(child)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject.prototype.get">
+            function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>get
+            <span class="apidocSignatureSpan">(attr, noInherit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject.prototype.getChildren">
+            function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>getChildren
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject.prototype.getParent">
+            function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>getParent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject.prototype.getParents">
+            function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>getParents
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject.prototype.getSiblings">
+            function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>getSiblings
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject.prototype.hasChild">
+            function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>hasChild
+            <span class="apidocSignatureSpan">(child)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject.prototype.hasParent">
+            function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>hasParent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.RecursiveObject.prototype.setParent">
+            function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>setParent
+            <span class="apidocSignatureSpan">(parent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.Row">module interfais.Row</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Row.Row">
+            function <span class="apidocSignatureSpan">interfais.</span>Row
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.Row.prototype">module interfais.Row.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Row.prototype.availableSpace">
+            function <span class="apidocSignatureSpan">interfais.Row.prototype.</span>availableSpace
+            <span class="apidocSignatureSpan">(parentSize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Row.prototype.prerender">
+            function <span class="apidocSignatureSpan">interfais.Row.prototype.</span>prerender
+            <span class="apidocSignatureSpan">(confinement, previousSibling)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Row.prototype.render">
+            function <span class="apidocSignatureSpan">interfais.Row.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.Row.prototype.setAsFocused">
+            function <span class="apidocSignatureSpan">interfais.Row.prototype.</span>setAsFocused
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.Row.prototype.</span>children</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">interfais.Row.prototype.</span>parent</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.paintHelper">module interfais.paintHelper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.paintHelper.init">
+            function <span class="apidocSignatureSpan">interfais.paintHelper.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.paintHelper.renderLine">
+            function <span class="apidocSignatureSpan">interfais.paintHelper.</span>renderLine
+            <span class="apidocSignatureSpan">(start, line)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.paintHelper.renderRectangle">
+            function <span class="apidocSignatureSpan">interfais.paintHelper.</span>renderRectangle
+            <span class="apidocSignatureSpan">(boundingBox, color)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.paintHelper.resetColors">
+            function <span class="apidocSignatureSpan">interfais.paintHelper.</span>resetColors
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.paintHelper.setBackground">
+            function <span class="apidocSignatureSpan">interfais.paintHelper.</span>setBackground
+            <span class="apidocSignatureSpan">(color)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.paintHelper.setForeground">
+            function <span class="apidocSignatureSpan">interfais.paintHelper.</span>setForeground
+            <span class="apidocSignatureSpan">(color)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.paintHelper.wipe">
+            function <span class="apidocSignatureSpan">interfais.paintHelper.</span>wipe
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.renderHelper">module interfais.renderHelper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.renderHelper.keyValue">
+            function <span class="apidocSignatureSpan">interfais.renderHelper.</span>keyValue
+            <span class="apidocSignatureSpan">(pairs, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.renderHelper.line">
+            function <span class="apidocSignatureSpan">interfais.renderHelper.</span>line
+            <span class="apidocSignatureSpan">(lines)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.renderHelper.list">
+            function <span class="apidocSignatureSpan">interfais.renderHelper.</span>list
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.renderHelper.paragraph">
+            function <span class="apidocSignatureSpan">interfais.renderHelper.</span>paragraph
+            <span class="apidocSignatureSpan">(text, formatting)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.renderHelper.ruler">
+            function <span class="apidocSignatureSpan">interfais.renderHelper.</span>ruler
+            <span class="apidocSignatureSpan">(char)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.renderHelper.spacer">
+            function <span class="apidocSignatureSpan">interfais.renderHelper.</span>spacer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.interfais.stringHelper">module interfais.stringHelper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.stringHelper.fill">
+            function <span class="apidocSignatureSpan">interfais.stringHelper.</span>fill
+            <span class="apidocSignatureSpan">(length, char)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.stringHelper.format">
+            function <span class="apidocSignatureSpan">interfais.stringHelper.</span>format
+            <span class="apidocSignatureSpan">(options, text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.interfais.stringHelper.resize">
+            function <span class="apidocSignatureSpan">interfais.stringHelper.</span>resize
+            <span class="apidocSignatureSpan">(string, length, padding, alignRight, clip)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais" id="apidoc.module.interfais">module interfais</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.interfais" id="apidoc.element.interfais.interfais">
+        function <span class="apidocSignatureSpan"></span>interfais
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Interfais(config) {
+	<span class="apidocCodeCommentSpan">/**
+	 * @name Interfais#config
+	 * @type {Object}
+	 */
+</span>	this.config = config;
+
+	/**
+	 * @name Interfais#inputManager
+	 * @type {InputManager}
+	 */
+	this.inputManager = new InputManager(this);
+
+	/**
+	 * @name Interfais#focusManager
+	 * @type {FocusManager}
+	 */
+	this.focusManager = new FocusManager(this);
+
+	/**
+	 * @name Interfais#routeManager
+	 * @type {RouteManager}
+	 */
+	this.routeManager = new RouteManager(this);
+
+	/**
+	 * @name Interfais#uiFactory
+	 * @memberof Interfais
+	 * @type {UiFactory}
+	 */
+	this.uiFactory    = new UiFactory(this);
+
+	/**
+	 * @name Interfais#viewFactory
+	 * @type {ViewFactory}
+	 */
+	this.viewFactory  = new ViewFactory(this);
+
+	init.apply(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Cell" id="apidoc.element.interfais.Cell">
+        function <span class="apidocSignatureSpan">interfais.</span>Cell
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cell(options) {
+	RecursiveObject.apply(this, arguments);
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.ConfigurableObject" id="apidoc.element.interfais.ConfigurableObject">
+        function <span class="apidocSignatureSpan">interfais.</span>ConfigurableObject
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ConfigurableObject(config) {
+	if (typeof config === 'string')
+		config = { name: config };
+
+	for (var attr in config) {
+		this[attr] = config[attr];
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.FocusManager" id="apidoc.element.interfais.FocusManager">
+        function <span class="apidocSignatureSpan">interfais.</span>FocusManager
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FocusManager(app) {
+	var $this = this,
+		focusableItems = [],
+		focusIndex = null,
+		destroyers = [];
+
+	this.FocusableObject = FocusableObject;
+
+	<span class="apidocCodeCommentSpan">/**
+	 * Sets event listeners on inputManager for this instance. Event listeners should be unset using destroy().
+	 * @method FocusManager#init
+	 * @param {Object} [keyConfig] Map keys to actions on the array. Unmapped actions will not be enabled.
+	 * @param {String} [keyConfig.keyPrevious] Keyname to map to "focus on previous menu" action
+	 * @param {String} [keyConfig.keyNext] Keyname to map to "focus on next menu" action
+	 * @param {String} [keyConfig.keyConfirm] Keyname to map to "select focused menu item" action
+	 * @param {Function} [onFocusChange] Executes whenever focus on this menu is changed.
+	 * @TODO: Refactor onFocusChange argument to be configured through dedicated method
+	 * @TODO: Concatenate all key override configurables in an object that is more generic than
+	 *        current key configuration names focusNext, focusPrevious, menuNext, menuPrevious.
+	 *        Suggested variable names: keyNext, keyPrevious, keyConfirm, keyEscape
+	 */
+</span>	this.init = function (keyConfig, onFocusChange) {
+		if(destroyers.length)
+			return; // Already initialized
+
+		var actions = {
+			keyPrevious: function keyPrevious(key) {
+				$this.shift(true);
+
+				if(typeof onFocusChange === 'function')
+					onFocusChange($this.getCurrent(), key);
+			},
+			keyNext: function keyNext (key) {
+				$this.shift(false);
+
+				if(typeof onFocusChange === 'function')
+					onFocusChange($this.getCurrent(), key);
+			},
+			keyConfirm: function keyConfirm(key) {
+				$this.getCurrent().confirm();
+			}
+		};
+
+
+		for (var focusAction in keyConfig) {
+//			if(!keyConfig.hasOwnProperty(focusAction))
+//				continue;
+
+			var inputKeyName = keyConfig[focusAction];
+
+			if(!inputKeyName)
+				continue;
+			var thisParticularAction = actions[focusAction];
+
+			if(typeof thisParticularAction !== 'function')
+				throw new Error('You\'re configuring the "'+inputKeyName+'" key for "'+focusAction+'" on a new FocusManager, which doesnt exist
+');
+
+			app.inputManager.on(inputKeyName, thisParticularAction);
+
+			destroyers.push({
+				inputKeyName: inputKeyName,
+				focusAction: focusAction,
+				cb: thisParticularAction
+			});
+		}
+
+		if(focusableItems.length)
+			$this.select(focusIndex === null ? 0 : focusIndex);
+	};
+
+	/**
+	 * Destroys listeners on inputManager for the events in init()
+	 * @method FocusManager#destroy
+	 */
+	this.destroy = function() {
+		while(destroyers.length &gt; 0){
+			var destroyer = destroyers.pop();
+			app.inputManager.off(destroyer.inputKeyName, destroyer.cb);
+		};
+	};
+
+	/**
+	 * List an item as focusable. Will automatically select it if it's the first one.
+	 * @method FocusManager#add
+	 * @param focusableItem
+	 * @returns {FocusManager}
+	 */
+	this.add = function (focusableItem) {
+		focusableItems.push(focusableItem);
+
+		return this;
+	};
+	/**
+	 * Planned for use while restructuring layout or disabling input() or option() UI. Not currently in use.
+	 * @method FocusManager#remove
+	 * @param focusableItem
+	 * @returns {FocusManager}
+	 */
+	this.remove = function (focusableItem) {
+		focusableItems.splice(focusableItems.indexOf(focusableItem), 1);
+		return this;
+	};
+
+	/**
+	 * Returns wether or not given object is already focusably by this manager.
+	 * @method FocusManager#isFocusable
+	 * @param focusableItem
+	 * @returns {boolean}
+	 */
+	this.isFocusable = function (focusableItem) {
+		return focusableItems.indexOf(focusableItem) &gt;= 0;
+	};
+
+	/**
+	 * Return the currently focused element. Do not call lifecycle methods on it!
+	 * @method FocusManager#getCurrent
+	 * @returns {*}
+	 */
+	this.getCurrent = function () {
+		return focusableItems[focusIndex];
+	};
+
+	/**
+	 * Focus the next focusable item.
+	 * @method FocusManager#shift
+	 * @param {Boolean} [reverse] True to focus previous item
+	 */
+	this.shift = function (reverse) {
+		if(!focusableItems.length)
+			return;
+
+		++this.shifts;
+		var i = focusIndex || 0;
+
+		if (reverse)
+			i = i === 0 ? focusableItems.length - 1 : --i;
+		else
+			i = i === focusableItems.length - 1 ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.FocusableObject" id="apidoc.element.interfais.FocusableObject">
+        function <span class="apidocSignatureSpan">interfais.</span>FocusableObject
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FocusableObject(name) {
+	this.name = name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		}
+
+		options = options || {};
+
+		if (!self.isInteractive())
+			Ui.makeInteractive.apply(this);
+
+		var command = new app.focusManager.<span class="apidocCodeKeywordSpan">FocusableObject</span>(name),
+			emitter = null,
+			value = '',
+			cursor = value.length,
+			focused = false;
+
+		command.confirm = function() {
+			callback(value);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Layout" id="apidoc.element.interfais.Layout">
+        function <span class="apidocSignatureSpan">interfais.</span>Layout
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Layout(options) {
+	RecursiveObject.apply(this, arguments);
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject" id="apidoc.element.interfais.RecursiveObject">
+        function <span class="apidocSignatureSpan">interfais.</span>RecursiveObject
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RecursiveObject(options) {
+	ConfigurableObject.apply(this, arguments);
+
+	this.parent = null;
+	this.children = [];
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Row" id="apidoc.element.interfais.Row">
+        function <span class="apidocSignatureSpan">interfais.</span>Row
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Row(options) {
+	RecursiveObject.apply(this, arguments);
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.Cell" id="apidoc.module.interfais.Cell">module interfais.Cell</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Cell.Cell" id="apidoc.element.interfais.Cell.Cell">
+        function <span class="apidocSignatureSpan">interfais.</span>Cell
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cell(options) {
+	RecursiveObject.apply(this, arguments);
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.Cell.prototype" id="apidoc.module.interfais.Cell.prototype">module interfais.Cell.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Cell.prototype.availableSpace" id="apidoc.element.interfais.Cell.prototype.availableSpace">
+        function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>availableSpace
+        <span class="apidocSignatureSpan">(parentSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">availableSpace = function (parentSize) {
+	var width = this.width;
+
+	if (!width) {
+		// @TODO: Allow callback to calc width (fn(parent.width, parent.height){})
+		// @TODO: Find a more DRY way to do this and the Row scenario
+		width = this.getParent().prerendered.width;
+		var competition = 1;
+		this.getSiblings().forEach(function (cell) {
+			if (cell.width)
+				width -= cell.width;
+			else
+				++competition;
+		});
+		width = width / competition;
+	}
+
+	return {
+		width: width,
+		height: parentSize.height
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Cell.prototype.blur = function () {
+	if (this.view &amp;&amp; typeof this.view.blur === 'function')
+		this.view.blur();
+};
+
+Cell.prototype.prerender = function (confinement, previousSibling) {
+	var self = this,
+		prerendered = self.<span class="apidocCodeKeywordSpan">availableSpace</span>(confinement);
+
+	prerendered.x = previousSibling.x + (previousSibling.width || 0);
+	prerendered.y = previousSibling.y;
+
+	this.prerendered = prerendered;
+	if (this.view &amp;&amp; this.view.prerender)
+		this.view.prerender();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Cell.prototype.blur" id="apidoc.element.interfais.Cell.prototype.blur">
+        function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>blur
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">blur = function () {
+	if (this.view &amp;&amp; typeof this.view.blur === 'function')
+		this.view.blur();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Cell.prototype.focus = function () {
+	if (this.view &amp;&amp; typeof this.view.focus === 'function')
+		this.view.focus();
+};
+
+Cell.prototype.blur = function () {
+	if (this.view &amp;&amp; typeof this.view.blur === 'function')
+		this.view.<span class="apidocCodeKeywordSpan">blur</span>();
+};
+
+Cell.prototype.prerender = function (confinement, previousSibling) {
+	var self = this,
+		prerendered = self.availableSpace(confinement);
+
+	prerendered.x = previousSibling.x + (previousSibling.width || 0);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Cell.prototype.focus" id="apidoc.element.interfais.Cell.prototype.focus">
+        function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>focus
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">focus = function () {
+	if (this.view &amp;&amp; typeof this.view.focus === 'function')
+		this.view.focus();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+Cell.prototype = new RecursiveObject;
+
+
+Cell.prototype.focus = function () {
+	if (this.view &amp;&amp; typeof this.view.focus === 'function')
+		this.view.<span class="apidocCodeKeywordSpan">focus</span>();
+};
+
+Cell.prototype.blur = function () {
+	if (this.view &amp;&amp; typeof this.view.blur === 'function')
+		this.view.blur();
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Cell.prototype.prerender" id="apidoc.element.interfais.Cell.prototype.prerender">
+        function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>prerender
+        <span class="apidocSignatureSpan">(confinement, previousSibling)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prerender = function (confinement, previousSibling) {
+	var self = this,
+		prerendered = self.availableSpace(confinement);
+
+	prerendered.x = previousSibling.x + (previousSibling.width || 0);
+	prerendered.y = previousSibling.y;
+
+	this.prerendered = prerendered;
+	if (this.view &amp;&amp; this.view.prerender)
+		this.view.prerender();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		prerendered = self.availableSpace(confinement);
+
+	prerendered.x = previousSibling.x + (previousSibling.width || 0);
+	prerendered.y = previousSibling.y;
+
+	this.prerendered = prerendered;
+	if (this.view &amp;&amp; this.view.prerender)
+		this.view.<span class="apidocCodeKeywordSpan">prerender</span>();
+};
+
+
+Cell.prototype.render = function () {
+	if (!this.view)
+		return;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Cell.prototype.render" id="apidoc.element.interfais.Cell.prototype.render">
+        function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function () {
+	if (!this.view)
+		return;
+
+	if (!this.prerendered)
+		return;
+
+	if (!this.prerendered.width || this.prerendered.width &lt;= 0)
+		return;
+
+	if (!this.prerendered.height || this.prerendered.height &lt;= 0)
+		return;
+
+	this.view.render();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Works on my machine (ubuntu box). Seen it work on an apple. Doesn't work on windows, though it didn't break as hard as
+ I had expected it to. Pull requests are welcome, since I have no intention of adopting Windows as a development platform myself
+.
+
+# Known bugs
+* If you're feeling brave, run a text search in lib/ for "@TODO"
+* Lists and keyValue pairs lose their special formatting after focus or blur, because there is no proper color palette thingy theme
+.
+* The system runs into an infinite loop or division by zero somewhere when the UI is too narrow to leave room for stretching cells
+ one fixed-width cells take up all the space. For this reason, the minimum layout width is hardcoded to 60 columns.
+* Input fields may render partial formatting characters when they are almost as wide as the available width. The input value should
+ be clipped, instead of the whole rendered line.
+* The system is limited in that it cannot detect synchronous ui.<span class="apidocCodeKeywordSpan">render</span>() calls in ui.
+render() line callbacks. This would cause an infinite loop and out-of-memory crash.
+
+# Licence
+Copyright (c) 2014 Wybe Minnebo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Cell.prototype.setView" id="apidoc.element.interfais.Cell.prototype.setView">
+        function <span class="apidocSignatureSpan">interfais.Cell.prototype.</span>setView
+        <span class="apidocSignatureSpan">(view, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setView = function (view, args) {
+	if (this.view &amp;&amp; typeof this.view.close === 'function')
+		this.view.close();
+
+	delete this.view;
+
+	this.view = new view(this, args);
+
+	if (typeof this.view.open === 'function') {
+		this.view.open();
+	}
+
+	if (this.prerendered) {
+		this.view.prerender();
+		this.render();
+	}
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+
+	function interpretCellConfig(cellConfig) {
+		var cell;
+
+		if (typeof cellConfig === 'function'){
+			cell = new Cell();
+			cell.<span class="apidocCodeKeywordSpan">setView</span>(app.viewFactory(cellConfig));
+
+		} else {
+			cell = new Cell(cellConfig);
+
+			if (cellConfig.name) {
+				route.registerCell(cellConfig.name, cell);
+			}
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.ConfigurableObject" id="apidoc.module.interfais.ConfigurableObject">module interfais.ConfigurableObject</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.ConfigurableObject.ConfigurableObject" id="apidoc.element.interfais.ConfigurableObject.ConfigurableObject">
+        function <span class="apidocSignatureSpan">interfais.</span>ConfigurableObject
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ConfigurableObject(config) {
+	if (typeof config === 'string')
+		config = { name: config };
+
+	for (var attr in config) {
+		this[attr] = config[attr];
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.ConfigurableObject.prototype" id="apidoc.module.interfais.ConfigurableObject.prototype">module interfais.ConfigurableObject.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.ConfigurableObject.prototype.get" id="apidoc.element.interfais.ConfigurableObject.prototype.get">
+        function <span class="apidocSignatureSpan">interfais.ConfigurableObject.prototype.</span>get
+        <span class="apidocSignatureSpan">(attrName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (attrName) {
+	return this[attrName];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Boolean} [noInherit]
+ * @returns {*}
+ */
+RecursiveObject.prototype.get = function (attr, noInherit) {
+	if (noInherit)
+		return this[attr];
+
+	return this[attr] || (this.parent &amp;&amp; typeof this.parent.get == 'function' ? this.parent.<span class="apidocCodeKeywordSpan
+">get</span>(attr, noInherit) : (this.parent ? this.parent[attr] : this[attr]));
+};
+
+/**
+ * @returns {Boolean}
+ */
+RecursiveObject.prototype.hasParent = function () {
+	return !!this.parent;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.ConfigurableObject.prototype.set" id="apidoc.element.interfais.ConfigurableObject.prototype.set">
+        function <span class="apidocSignatureSpan">interfais.ConfigurableObject.prototype.</span>set
+        <span class="apidocSignatureSpan">(attrName, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (attrName, value) {
+	if (typeof attrName === 'object') {
+		for (var realAttrName in attrName)
+			if (attrName.hasOwnProperty(realAttrName))
+				this.set(realAttrName, attrName[realAttrName]);
+
+		return this;
+	}
+
+	this[attrName] = value;
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+}
+
+ConfigurableObject.prototype.set = function (attrName, value) {
+	if (typeof attrName === 'object') {
+		for (var realAttrName in attrName)
+			if (attrName.hasOwnProperty(realAttrName))
+				this.<span class="apidocCodeKeywordSpan">set</span>(realAttrName, attrName[realAttrName]);
+
+		return this;
+	}
+
+	this[attrName] = value;
+
+	return this;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.FocusManager" id="apidoc.module.interfais.FocusManager">module interfais.FocusManager</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.FocusManager.FocusManager" id="apidoc.element.interfais.FocusManager.FocusManager">
+        function <span class="apidocSignatureSpan">interfais.</span>FocusManager
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FocusManager(app) {
+	var $this = this,
+		focusableItems = [],
+		focusIndex = null,
+		destroyers = [];
+
+	this.FocusableObject = FocusableObject;
+
+	<span class="apidocCodeCommentSpan">/**
+	 * Sets event listeners on inputManager for this instance. Event listeners should be unset using destroy().
+	 * @method FocusManager#init
+	 * @param {Object} [keyConfig] Map keys to actions on the array. Unmapped actions will not be enabled.
+	 * @param {String} [keyConfig.keyPrevious] Keyname to map to "focus on previous menu" action
+	 * @param {String} [keyConfig.keyNext] Keyname to map to "focus on next menu" action
+	 * @param {String} [keyConfig.keyConfirm] Keyname to map to "select focused menu item" action
+	 * @param {Function} [onFocusChange] Executes whenever focus on this menu is changed.
+	 * @TODO: Refactor onFocusChange argument to be configured through dedicated method
+	 * @TODO: Concatenate all key override configurables in an object that is more generic than
+	 *        current key configuration names focusNext, focusPrevious, menuNext, menuPrevious.
+	 *        Suggested variable names: keyNext, keyPrevious, keyConfirm, keyEscape
+	 */
+</span>	this.init = function (keyConfig, onFocusChange) {
+		if(destroyers.length)
+			return; // Already initialized
+
+		var actions = {
+			keyPrevious: function keyPrevious(key) {
+				$this.shift(true);
+
+				if(typeof onFocusChange === 'function')
+					onFocusChange($this.getCurrent(), key);
+			},
+			keyNext: function keyNext (key) {
+				$this.shift(false);
+
+				if(typeof onFocusChange === 'function')
+					onFocusChange($this.getCurrent(), key);
+			},
+			keyConfirm: function keyConfirm(key) {
+				$this.getCurrent().confirm();
+			}
+		};
+
+
+		for (var focusAction in keyConfig) {
+//			if(!keyConfig.hasOwnProperty(focusAction))
+//				continue;
+
+			var inputKeyName = keyConfig[focusAction];
+
+			if(!inputKeyName)
+				continue;
+			var thisParticularAction = actions[focusAction];
+
+			if(typeof thisParticularAction !== 'function')
+				throw new Error('You\'re configuring the "'+inputKeyName+'" key for "'+focusAction+'" on a new FocusManager, which doesnt exist
+');
+
+			app.inputManager.on(inputKeyName, thisParticularAction);
+
+			destroyers.push({
+				inputKeyName: inputKeyName,
+				focusAction: focusAction,
+				cb: thisParticularAction
+			});
+		}
+
+		if(focusableItems.length)
+			$this.select(focusIndex === null ? 0 : focusIndex);
+	};
+
+	/**
+	 * Destroys listeners on inputManager for the events in init()
+	 * @method FocusManager#destroy
+	 */
+	this.destroy = function() {
+		while(destroyers.length &gt; 0){
+			var destroyer = destroyers.pop();
+			app.inputManager.off(destroyer.inputKeyName, destroyer.cb);
+		};
+	};
+
+	/**
+	 * List an item as focusable. Will automatically select it if it's the first one.
+	 * @method FocusManager#add
+	 * @param focusableItem
+	 * @returns {FocusManager}
+	 */
+	this.add = function (focusableItem) {
+		focusableItems.push(focusableItem);
+
+		return this;
+	};
+	/**
+	 * Planned for use while restructuring layout or disabling input() or option() UI. Not currently in use.
+	 * @method FocusManager#remove
+	 * @param focusableItem
+	 * @returns {FocusManager}
+	 */
+	this.remove = function (focusableItem) {
+		focusableItems.splice(focusableItems.indexOf(focusableItem), 1);
+		return this;
+	};
+
+	/**
+	 * Returns wether or not given object is already focusably by this manager.
+	 * @method FocusManager#isFocusable
+	 * @param focusableItem
+	 * @returns {boolean}
+	 */
+	this.isFocusable = function (focusableItem) {
+		return focusableItems.indexOf(focusableItem) &gt;= 0;
+	};
+
+	/**
+	 * Return the currently focused element. Do not call lifecycle methods on it!
+	 * @method FocusManager#getCurrent
+	 * @returns {*}
+	 */
+	this.getCurrent = function () {
+		return focusableItems[focusIndex];
+	};
+
+	/**
+	 * Focus the next focusable item.
+	 * @method FocusManager#shift
+	 * @param {Boolean} [reverse] True to focus previous item
+	 */
+	this.shift = function (reverse) {
+		if(!focusableItems.length)
+			return;
+
+		++this.shifts;
+		var i = focusIndex || 0;
+
+		if (reverse)
+			i = i === 0 ? focusableItems.length - 1 : --i;
+		else
+			i = i === focusableItems.length - 1 ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.FocusManager.FocusableObject" id="apidoc.element.interfais.FocusManager.FocusableObject">
+        function <span class="apidocSignatureSpan">interfais.FocusManager.</span>FocusableObject
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FocusableObject(name) {
+	this.name = name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		}
+
+		options = options || {};
+
+		if (!self.isInteractive())
+			Ui.makeInteractive.apply(this);
+
+		var command = new app.focusManager.<span class="apidocCodeKeywordSpan">FocusableObject</span>(name),
+			emitter = null,
+			value = '',
+			cursor = value.length,
+			focused = false;
+
+		command.confirm = function() {
+			callback(value);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.FocusableObject" id="apidoc.module.interfais.FocusableObject">module interfais.FocusableObject</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.FocusableObject.FocusableObject" id="apidoc.element.interfais.FocusableObject.FocusableObject">
+        function <span class="apidocSignatureSpan">interfais.</span>FocusableObject
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FocusableObject(name) {
+	this.name = name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		}
+
+		options = options || {};
+
+		if (!self.isInteractive())
+			Ui.makeInteractive.apply(this);
+
+		var command = new app.focusManager.<span class="apidocCodeKeywordSpan">FocusableObject</span>(name),
+			emitter = null,
+			value = '',
+			cursor = value.length,
+			focused = false;
+
+		command.confirm = function() {
+			callback(value);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.FocusableObject.prototype" id="apidoc.module.interfais.FocusableObject.prototype">module interfais.FocusableObject.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.FocusableObject.prototype.blur" id="apidoc.element.interfais.FocusableObject.prototype.blur">
+        function <span class="apidocSignatureSpan">interfais.FocusableObject.prototype.</span>blur
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">blur = function () {
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Cell.prototype.focus = function () {
+	if (this.view &amp;&amp; typeof this.view.focus === 'function')
+		this.view.focus();
+};
+
+Cell.prototype.blur = function () {
+	if (this.view &amp;&amp; typeof this.view.blur === 'function')
+		this.view.<span class="apidocCodeKeywordSpan">blur</span>();
+};
+
+Cell.prototype.prerender = function (confinement, previousSibling) {
+	var self = this,
+		prerendered = self.availableSpace(confinement);
+
+	prerendered.x = previousSibling.x + (previousSibling.width || 0);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.FocusableObject.prototype.confirm" id="apidoc.element.interfais.FocusableObject.prototype.confirm">
+        function <span class="apidocSignatureSpan">interfais.FocusableObject.prototype.</span>confirm
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">confirm = function () {
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			keyNext: function keyNext (key) {
+				$this.shift(false);
+
+				if(typeof onFocusChange === 'function')
+					onFocusChange($this.getCurrent(), key);
+			},
+			keyConfirm: function keyConfirm(key) {
+				$this.getCurrent().<span class="apidocCodeKeywordSpan">confirm</span>();
+			}
+		};
+
+
+		for (var focusAction in keyConfig) {
+//			if(!keyConfig.hasOwnProperty(focusAction))
+//				continue;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.FocusableObject.prototype.enter" id="apidoc.element.interfais.FocusableObject.prototype.enter">
+        function <span class="apidocSignatureSpan">interfais.FocusableObject.prototype.</span>enter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enter = function () {
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.FocusableObject.prototype.escape" id="apidoc.element.interfais.FocusableObject.prototype.escape">
+        function <span class="apidocSignatureSpan">interfais.FocusableObject.prototype.</span>escape
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escape = function () {
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.FocusableObject.prototype.focus" id="apidoc.element.interfais.FocusableObject.prototype.focus">
+        function <span class="apidocSignatureSpan">interfais.FocusableObject.prototype.</span>focus
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">focus = function () {
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+Cell.prototype = new RecursiveObject;
+
+
+Cell.prototype.focus = function () {
+	if (this.view &amp;&amp; typeof this.view.focus === 'function')
+		this.view.<span class="apidocCodeKeywordSpan">focus</span>();
+};
+
+Cell.prototype.blur = function () {
+	if (this.view &amp;&amp; typeof this.view.blur === 'function')
+		this.view.blur();
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.Layout" id="apidoc.module.interfais.Layout">module interfais.Layout</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Layout.Layout" id="apidoc.element.interfais.Layout.Layout">
+        function <span class="apidocSignatureSpan">interfais.</span>Layout
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Layout(options) {
+	RecursiveObject.apply(this, arguments);
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.Layout.prototype" id="apidoc.module.interfais.Layout.prototype">module interfais.Layout.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Layout.prototype.availableSpace" id="apidoc.element.interfais.Layout.prototype.availableSpace">
+        function <span class="apidocSignatureSpan">interfais.Layout.prototype.</span>availableSpace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">availableSpace = function () {
+	var size = {
+		width:  this.width  || process.stdout.columns,
+		height: this.height || process.stdout.rows
+	};
+
+	// TODO: When the screen resizes (from large to small or the other way around) and the width comes past a point that
+	// a flowing column (view content, it appears) should or should no longer be rendered, the system crashes. This appears
+	// to be caused by an infinite loop, process with exit after out-of-memory.
+	// To avoid, width is hardcoded to 60, here's hoping
+	if (size.width &lt; 60)
+		size.width = 60;
+	if (size.height &lt; 10)
+		size.height = 10;
+
+	return size;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Cell.prototype.blur = function () {
+	if (this.view &amp;&amp; typeof this.view.blur === 'function')
+		this.view.blur();
+};
+
+Cell.prototype.prerender = function (confinement, previousSibling) {
+	var self = this,
+		prerendered = self.<span class="apidocCodeKeywordSpan">availableSpace</span>(confinement);
+
+	prerendered.x = previousSibling.x + (previousSibling.width || 0);
+	prerendered.y = previousSibling.y;
+
+	this.prerendered = prerendered;
+	if (this.view &amp;&amp; this.view.prerender)
+		this.view.prerender();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Layout.prototype.prerender" id="apidoc.element.interfais.Layout.prototype.prerender">
+        function <span class="apidocSignatureSpan">interfais.Layout.prototype.</span>prerender
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prerender = function () {
+	var prerendered = this.availableSpace();
+
+	prerendered.x = 0;
+	prerendered.y = 1;
+
+	this.prerendered = prerendered;
+
+	this.getChildren().forEach(function (row, i, children) {
+		row.prerender(
+			prerendered, // Bounding box
+			i &gt; 0
+				? children[i - 1].prerendered
+				: { x: prerendered.x, y: prerendered.y } // Previous sibling, or parent x&amp;y
+		);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		prerendered = self.availableSpace(confinement);
+
+	prerendered.x = previousSibling.x + (previousSibling.width || 0);
+	prerendered.y = previousSibling.y;
+
+	this.prerendered = prerendered;
+	if (this.view &amp;&amp; this.view.prerender)
+		this.view.<span class="apidocCodeKeywordSpan">prerender</span>();
+};
+
+
+Cell.prototype.render = function () {
+	if (!this.view)
+		return;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Layout.prototype.render" id="apidoc.element.interfais.Layout.prototype.render">
+        function <span class="apidocSignatureSpan">interfais.Layout.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function () {
+	this.getChildren().forEach(function (cell) {
+		cell.render();
+	});
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Works on my machine (ubuntu box). Seen it work on an apple. Doesn't work on windows, though it didn't break as hard as
+ I had expected it to. Pull requests are welcome, since I have no intention of adopting Windows as a development platform myself
+.
+
+# Known bugs
+* If you're feeling brave, run a text search in lib/ for "@TODO"
+* Lists and keyValue pairs lose their special formatting after focus or blur, because there is no proper color palette thingy theme
+.
+* The system runs into an infinite loop or division by zero somewhere when the UI is too narrow to leave room for stretching cells
+ one fixed-width cells take up all the space. For this reason, the minimum layout width is hardcoded to 60 columns.
+* Input fields may render partial formatting characters when they are almost as wide as the available width. The input value should
+ be clipped, instead of the whole rendered line.
+* The system is limited in that it cannot detect synchronous ui.<span class="apidocCodeKeywordSpan">render</span>() calls in ui.
+render() line callbacks. This would cause an infinite loop and out-of-memory crash.
+
+# Licence
+Copyright (c) 2014 Wybe Minnebo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.RecursiveObject" id="apidoc.module.interfais.RecursiveObject">module interfais.RecursiveObject</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject.RecursiveObject" id="apidoc.element.interfais.RecursiveObject.RecursiveObject">
+        function <span class="apidocSignatureSpan">interfais.</span>RecursiveObject
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RecursiveObject(options) {
+	ConfigurableObject.apply(this, arguments);
+
+	this.parent = null;
+	this.children = [];
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.RecursiveObject.prototype" id="apidoc.module.interfais.RecursiveObject.prototype">module interfais.RecursiveObject.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject.prototype.addChild" id="apidoc.element.interfais.RecursiveObject.prototype.addChild">
+        function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>addChild
+        <span class="apidocSignatureSpan">(child)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addChild = function (child) {
+	this.children.push(child);
+
+	if (typeof child.setParent == 'function')
+		child.setParent(this);
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			rows = (options.rows || []).map(interpretRowConfig);
+			options.rows = null;
+		}
+
+		layout = new Layout(options);
+
+		rows.forEach(function (row) {
+			layout.<span class="apidocCodeKeywordSpan">addChild</span>(row);
+		});
+
+		return layout;
+	}
+
+	function interpretRowConfig(options) {
+		var cells, row;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject.prototype.get" id="apidoc.element.interfais.RecursiveObject.prototype.get">
+        function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>get
+        <span class="apidocSignatureSpan">(attr, noInherit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (attr, noInherit) {
+	if (noInherit)
+		return this[attr];
+
+	return this[attr] || (this.parent &amp;&amp; typeof this.parent.get == 'function' ? this.parent.get(attr, noInherit) : (this.parent ? this
+.parent[attr] : this[attr]));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Boolean} [noInherit]
+ * @returns {*}
+ */
+RecursiveObject.prototype.get = function (attr, noInherit) {
+	if (noInherit)
+		return this[attr];
+
+	return this[attr] || (this.parent &amp;&amp; typeof this.parent.get == 'function' ? this.parent.<span class="apidocCodeKeywordSpan
+">get</span>(attr, noInherit) : (this.parent ? this.parent[attr] : this[attr]));
+};
+
+/**
+ * @returns {Boolean}
+ */
+RecursiveObject.prototype.hasParent = function () {
+	return !!this.parent;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject.prototype.getChildren" id="apidoc.element.interfais.RecursiveObject.prototype.getChildren">
+        function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>getChildren
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getChildren = function () {
+	return this.children;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var prerendered = this.availableSpace();
+
+	prerendered.x = 0;
+	prerendered.y = 1;
+
+	this.prerendered = prerendered;
+
+	this.<span class="apidocCodeKeywordSpan">getChildren</span>().forEach(function (row, i, children) {
+		row.prerender(
+			prerendered, // Bounding box
+			i &gt; 0
+				? children[i - 1].prerendered
+				: { x: prerendered.x, y: prerendered.y } // Previous sibling, or parent x&amp;y
+		);
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject.prototype.getParent" id="apidoc.element.interfais.RecursiveObject.prototype.getParent">
+        function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>getParent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getParent = function () {
+	return this.parent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Cell.prototype.availableSpace = function (parentSize) {
+	var width = this.width;
+
+	if (!width) {
+		// @TODO: Allow callback to calc width (fn(parent.width, parent.height){})
+		// @TODO: Find a more DRY way to do this and the Row scenario
+		width = this.<span class="apidocCodeKeywordSpan">getParent</span>().prerendered.width;
+		var competition = 1;
+		this.getSiblings().forEach(function (cell) {
+			if (cell.width)
+				width -= cell.width;
+			else
+				++competition;
+		});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject.prototype.getParents" id="apidoc.element.interfais.RecursiveObject.prototype.getParents">
+        function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>getParents
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getParents = function () {
+	var parents = [],
+		root = this;
+
+	while ((root = root.getParent()) &amp;&amp; parents.length &lt; 100) {
+		parents.unshift(root);
+	}
+	return parents;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject.prototype.getSiblings" id="apidoc.element.interfais.RecursiveObject.prototype.getSiblings">
+        function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>getSiblings
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSiblings = function () {
+	var self = this;
+	return this.parent ? (this.parent.children || []).filter(function (sibling) {
+		return sibling !== self;
+	}) : [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var width = this.width;
+
+	if (!width) {
+		// @TODO: Allow callback to calc width (fn(parent.width, parent.height){})
+		// @TODO: Find a more DRY way to do this and the Row scenario
+		width = this.getParent().prerendered.width;
+		var competition = 1;
+		this.<span class="apidocCodeKeywordSpan">getSiblings</span>().forEach(function (cell) {
+			if (cell.width)
+				width -= cell.width;
+			else
+				++competition;
+		});
+		width = width / competition;
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject.prototype.hasChild" id="apidoc.element.interfais.RecursiveObject.prototype.hasChild">
+        function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>hasChild
+        <span class="apidocSignatureSpan">(child)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasChild = function (child) {
+	return this.children.indexOf(child) &gt;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject.prototype.hasParent" id="apidoc.element.interfais.RecursiveObject.prototype.hasParent">
+        function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>hasParent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasParent = function () {
+	return !!this.parent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.RecursiveObject.prototype.setParent" id="apidoc.element.interfais.RecursiveObject.prototype.setParent">
+        function <span class="apidocSignatureSpan">interfais.RecursiveObject.prototype.</span>setParent
+        <span class="apidocSignatureSpan">(parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setParent = function (parent) {
+	this.parent = parent;
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {ConfigurableObject} child
+ * @returns {ConfigurableObject} self
+ */
+RecursiveObject.prototype.addChild = function (child) {
+	this.children.push(child);
+
+	if (typeof child.setParent == 'function')
+		child.<span class="apidocCodeKeywordSpan">setParent</span>(this);
+
+	return this;
+};
+
+module.exports = RecursiveObject;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.Row" id="apidoc.module.interfais.Row">module interfais.Row</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Row.Row" id="apidoc.element.interfais.Row.Row">
+        function <span class="apidocSignatureSpan">interfais.</span>Row
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Row(options) {
+	RecursiveObject.apply(this, arguments);
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.Row.prototype" id="apidoc.module.interfais.Row.prototype">module interfais.Row.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Row.prototype.availableSpace" id="apidoc.element.interfais.Row.prototype.availableSpace">
+        function <span class="apidocSignatureSpan">interfais.Row.prototype.</span>availableSpace
+        <span class="apidocSignatureSpan">(parentSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">availableSpace = function (parentSize) {
+	var height = this.height;
+
+	if (!height) {
+		// @TODO: Find a more DRY way to do this and the Cell scenario
+		height = this.getParent().prerendered.height;
+		var competition = 1;
+		this.getSiblings().forEach(function (cell) {
+			if (cell.height)
+				height -= cell.height;
+			else
+				++competition;
+		});
+		height = height / competition;
+	}
+
+	return {
+		width: parentSize.width,
+		height: height
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Cell.prototype.blur = function () {
+	if (this.view &amp;&amp; typeof this.view.blur === 'function')
+		this.view.blur();
+};
+
+Cell.prototype.prerender = function (confinement, previousSibling) {
+	var self = this,
+		prerendered = self.<span class="apidocCodeKeywordSpan">availableSpace</span>(confinement);
+
+	prerendered.x = previousSibling.x + (previousSibling.width || 0);
+	prerendered.y = previousSibling.y;
+
+	this.prerendered = prerendered;
+	if (this.view &amp;&amp; this.view.prerender)
+		this.view.prerender();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Row.prototype.prerender" id="apidoc.element.interfais.Row.prototype.prerender">
+        function <span class="apidocSignatureSpan">interfais.Row.prototype.</span>prerender
+        <span class="apidocSignatureSpan">(confinement, previousSibling)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prerender = function (confinement, previousSibling) {
+	var self = this,
+		prerendered = self.availableSpace(confinement);
+
+	prerendered.x = previousSibling.x;
+	prerendered.y = previousSibling.y + (previousSibling.height || 0);
+
+	this.prerendered = prerendered;
+
+	this.getChildren().forEach(function (cell, i, children) {
+		cell.prerender(prerendered, i &gt; 0 ? children[i - 1].prerendered : { x: prerendered.x, y: prerendered.y });
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		prerendered = self.availableSpace(confinement);
+
+	prerendered.x = previousSibling.x + (previousSibling.width || 0);
+	prerendered.y = previousSibling.y;
+
+	this.prerendered = prerendered;
+	if (this.view &amp;&amp; this.view.prerender)
+		this.view.<span class="apidocCodeKeywordSpan">prerender</span>();
+};
+
+
+Cell.prototype.render = function () {
+	if (!this.view)
+		return;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Row.prototype.render" id="apidoc.element.interfais.Row.prototype.render">
+        function <span class="apidocSignatureSpan">interfais.Row.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function () {
+	this.getChildren().forEach(function (cell) {
+		cell.render();
+	});
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Works on my machine (ubuntu box). Seen it work on an apple. Doesn't work on windows, though it didn't break as hard as
+ I had expected it to. Pull requests are welcome, since I have no intention of adopting Windows as a development platform myself
+.
+
+# Known bugs
+* If you're feeling brave, run a text search in lib/ for "@TODO"
+* Lists and keyValue pairs lose their special formatting after focus or blur, because there is no proper color palette thingy theme
+.
+* The system runs into an infinite loop or division by zero somewhere when the UI is too narrow to leave room for stretching cells
+ one fixed-width cells take up all the space. For this reason, the minimum layout width is hardcoded to 60 columns.
+* Input fields may render partial formatting characters when they are almost as wide as the available width. The input value should
+ be clipped, instead of the whole rendered line.
+* The system is limited in that it cannot detect synchronous ui.<span class="apidocCodeKeywordSpan">render</span>() calls in ui.
+render() line callbacks. This would cause an infinite loop and out-of-memory crash.
+
+# Licence
+Copyright (c) 2014 Wybe Minnebo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.Row.prototype.setAsFocused" id="apidoc.element.interfais.Row.prototype.setAsFocused">
+        function <span class="apidocSignatureSpan">interfais.Row.prototype.</span>setAsFocused
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAsFocused = function () {
+	this.menu.setAsFocused();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	return this;
+}
+
+Row.prototype = new RecursiveObject;
+
+Row.prototype.setAsFocused = function () {
+	this.menu.<span class="apidocCodeKeywordSpan">setAsFocused</span>();
+};
+
+
+Row.prototype.prerender = function (confinement, previousSibling) {
+	var self = this,
+		prerendered = self.availableSpace(confinement);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.paintHelper" id="apidoc.module.interfais.paintHelper">module interfais.paintHelper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.paintHelper.init" id="apidoc.element.interfais.paintHelper.init">
+        function <span class="apidocSignatureSpan">interfais.paintHelper.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init() {
+	charm.pipe(process.stdout);
+	wipe();
+
+	// @TODO: not sure if this belongs here
+	process.on('exit', function () {
+		//paint.wipe();
+		charm.cursor(true);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+If you'd like to use this project and require versioned dependencies, point to a specific tag, commit, send me a message (and
+ I'll version) or create a fork. Pull requests are, of course, encouraged!
+
+* v 1.0.0
+* Managers &amp; applicable factories instanced within, and exposed through interfais application instance, this change introduces
+ breaking changes.
+* ui.stream() for streaming stdout and stderr from spawned child processes, for example
+* ui.keyValue() for formatting key/value pairs
+* ui.clear() instead of cell.clear() for instantly clearing available ui space
+* Dropping app.<span class="apidocCodeKeywordSpan">init</span>() method, dropping route config to constructor
+* Tried it on a mac, it was OK
+* Configurable key combo's for interactions
+* InputManager.catch can alternatively emit named events, which is actually preferred for functionality tucked away in an aspect
+* Code cleanup everywhere, docs for the most important parts
+* v 0.1.1
+* scrolling with shift+up and shift+down
+* ui.input() configurator for text or input fields
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.paintHelper.renderLine" id="apidoc.element.interfais.paintHelper.renderLine">
+        function <span class="apidocSignatureSpan">interfais.paintHelper.</span>renderLine
+        <span class="apidocSignatureSpan">(start, line)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renderLine(start, line) {
+	charm
+		.position(start.x + 1, start.y)
+		.write(line);
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	// Formatted content (formatting is done at _prerender time
+	line.push(lineString || stringHelper.fill(this.getContentWidth()));
+
+	// Right padding
+	line.push(stringHelper.fill(this._padding.x));
+
+	paintHelper.<span class="apidocCodeKeywordSpan">renderLine</span>({
+		x: this._box.x + this._margin.x,
+		y: this._box.y + this._prerendered.margin.top + y
+		//y: this._box.y + this._margin.y + y
+	}, line.join(''));
+
+	// I would love to truncate to horizontal bounds, but unfortunately string.length would
+	// be unreliable due to formatting characters. We need a String that does not count
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.paintHelper.renderRectangle" id="apidoc.element.interfais.paintHelper.renderRectangle">
+        function <span class="apidocSignatureSpan">interfais.paintHelper.</span>renderRectangle
+        <span class="apidocSignatureSpan">(boundingBox, color)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renderRectangle(boundingBox, color) {
+	paint.setBackground(color);
+
+	for (var i = 0; i &lt; boundingBox.height; i++)
+		charm
+			.position(boundingBox.x + 1, boundingBox.y + i)
+			.write(stringHelper.resize('', boundingBox.width, true));
+
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	/**
+	 * Makeshift function to clear the space available to this UI. Useful for thorough redraws.
+	 * @method Ui#clear
+	 * @returns {Ui}
+	 */
+	Ui.prototype.clear = function() {
+		paintHelper.<span class="apidocCodeKeywordSpan">renderRectangle</span>(this._box);
+		return this;
+	};
+
+	/**
+	 * Render everything.
+	 * @method Ui#render
+	 * @returns {Ui}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.paintHelper.resetColors" id="apidoc.element.interfais.paintHelper.resetColors">
+        function <span class="apidocSignatureSpan">interfais.paintHelper.</span>resetColors
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resetColors() {
+	process.stdout.write('\x1b[0m');
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * At render time the margin, padding and prerendered lines are sent to the output stream, stdout.
+ */
+function _render() {
+	var self = this;
+
+	var lineStrings = self._lines,
+		linesRendered = 0;
+	paintHelper.<span class="apidocCodeKeywordSpan">resetColors</span>();
+	paintHelper.setBackground(self._background);
+	paintHelper.setForeground(self._foreground);
+
+	// Top padding
+	if (self._prerendered.padding.top)
+		for (var i = linesRendered; i &lt; self._prerendered.padding.top; i++) {
+			_renderLine.apply(self, [linesRendered, '']);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.paintHelper.setBackground" id="apidoc.element.interfais.paintHelper.setBackground">
+        function <span class="apidocSignatureSpan">interfais.paintHelper.</span>setBackground
+        <span class="apidocSignatureSpan">(color)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setBackground(color) {
+	if (!color)
+		process.stdout.write('\x1b[49m');
+	else
+		charm.background(color);
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Number} boundingBox.x
+ * @param {Number} boundingBox.y
+ * @param {Number} boundingBox.width
+ * @param {Number} boundingBox.height
+ * @memberof paintHelper
+ */
+function renderRectangle(boundingBox, color) {
+	paint.<span class="apidocCodeKeywordSpan">setBackground</span>(color);
+
+	for (var i = 0; i &lt; boundingBox.height; i++)
+		charm
+			.position(boundingBox.x + 1, boundingBox.y + i)
+			.write(stringHelper.resize('', boundingBox.width, true));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.paintHelper.setForeground" id="apidoc.element.interfais.paintHelper.setForeground">
+        function <span class="apidocSignatureSpan">interfais.paintHelper.</span>setForeground
+        <span class="apidocSignatureSpan">(color)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setForeground(color) {
+	if (!color)
+		process.stdout.write('\x1b[39m');
+	else
+		charm.foreground(color);
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function _render() {
+	var self = this;
+
+	var lineStrings = self._lines,
+		linesRendered = 0;
+	paintHelper.resetColors();
+	paintHelper.setBackground(self._background);
+	paintHelper.<span class="apidocCodeKeywordSpan">setForeground</span>(self._foreground);
+
+	// Top padding
+	if (self._prerendered.padding.top)
+		for (var i = linesRendered; i &lt; self._prerendered.padding.top; i++) {
+			_renderLine.apply(self, [linesRendered, '']);
+			++linesRendered;
+		}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.paintHelper.wipe" id="apidoc.element.interfais.paintHelper.wipe">
+        function <span class="apidocSignatureSpan">interfais.paintHelper.</span>wipe
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wipe() {
+	charm.reset();
+	charm.cursor(false);
+	process.stdout.write('\x1b[0m');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+function init () {
+	charm.pipe(process.stdout);
+	wipe();
+
+	// @TODO: not sure if this belongs here
+	process.on('exit', function () {
+		//paint.<span class="apidocCodeKeywordSpan">wipe</span>();
+		charm.cursor(true);
+	});
+}
+
+
+/**
+* @memberof paintHelper
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.renderHelper" id="apidoc.module.interfais.renderHelper">module interfais.renderHelper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.renderHelper.keyValue" id="apidoc.element.interfais.renderHelper.keyValue">
+        function <span class="apidocSignatureSpan">interfais.renderHelper.</span>keyValue
+        <span class="apidocSignatureSpan">(pairs, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keyValue = function (pairs, options) {
+
+		if(!options)
+			options = {};
+
+
+		if(typeof pairs === 'object' &amp;&amp; typeof pairs.forEach !== 'function')
+			pairs = Object.keys(pairs).map(function(keyName) {
+				return {
+					key: keyName,
+					value: pairs[keyName]
+				};
+			});
+
+		if(!pairs || !pairs.length)
+			return null;
+
+		var seperatorString = options.seperator || '    ',
+			keyFormatting = {
+				dim: true
+			},
+			keyWidth = options.keyWidth || pairs.reduce(function(maxLength, pair) {
+				if(pair.key.length &gt; maxLength)
+					return pair.key.length;
+				return maxLength;
+			}, 0),
+			seperatorWidth = seperatorString.length,
+			valueWidth = this.getContentWidth() - keyWidth - seperatorWidth;
+
+		return pairs.reduce(function (pairLines, pair) {
+			var linesInWrappedValue = wordwrap(0, valueWidth, { mode: 'hard' })('' + pair.value).split('\n');
+
+			return pairLines.concat(linesInWrappedValue.map(function (line, i) {
+				var str = '';
+				if(i === 0)
+					str += stringHelper.format(keyFormatting, pair.key + stringHelper.fill(keyWidth - pair.key.length) + seperatorString);
+				else
+					str += stringHelper.fill(keyWidth + seperatorWidth);
+
+				str += line;
+
+				return str;
+			}));
+		}, []);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Unordered list
+.list([
+    'List items wrap as well...',
+    '...and are preceded by a list bullet'
+])
+
+// Simple table of key/value pairs
+.<span class="apidocCodeKeywordSpan">keyValue</span>({
+    'Method': 'ui.keyValue()',
+    'Purpose': 'To present key/value pairs, kind of like a definition list',
+    'Arguments': 'An object, or an array of objects describing the key and value'
+})
+
+// Character repeat across view width
+.ruler('-')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.renderHelper.line" id="apidoc.element.interfais.renderHelper.line">
+        function <span class="apidocSignatureSpan">interfais.renderHelper.</span>line
+        <span class="apidocSignatureSpan">(lines)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">line = function (lines) {
+		if (!(typeof lines === 'object' &amp;&amp; lines.length))
+			lines = [lines];
+
+		var width = this.getContentWidth();
+		return lines.map(function (line) {
+			if (!line)
+				return '$ invalid line';
+			return line.substr(0, width)
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    'Arguments': 'An object, or an array of objects describing the key and value'
+})
+
+// Character repeat across view width
+.ruler('-')
+
+// Non-wrapping line
+.<span class="apidocCodeKeywordSpan">line</span>('A line does not wrap')
+
+// Empty line
+.spacer()
+
+// Underlined
+.h2('Moar advanced')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.renderHelper.list" id="apidoc.element.interfais.renderHelper.list">
+        function <span class="apidocSignatureSpan">interfais.renderHelper.</span>list
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function (text) {
+		var indent = 0,
+			indentChar = '  &gt;  ',
+			indentWidth = indentChar.length,
+			indentCharFormatting = {
+				dim: true
+			},
+			width = this.getContentWidth() - (indent + 1) * indentWidth;
+
+		if (!(typeof text === 'object' &amp;&amp; text.length))
+			text = [text];
+
+		text = text.reduce(function (previousValue, currentValue) {
+			var listItemLines = (typeof currentValue === 'string' || typeof currentValue === 'number')
+				? wordwrap(0, width, { mode: 'hard' })('' + currentValue).split('\n')
+				: currentValue;
+
+			return previousValue.concat(listItemLines.map(function (line, i) {
+				return stringHelper.fill(indent * indentWidth) + (i === 0 ? stringHelper.format(indentCharFormatting, indentChar) : stringHelper
+.fill(indentWidth)) + line;
+			}));
+		}, []);
+
+		return text;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Uppercased and underlined
+.h1('Page header, its pretty prominent')
+
+// Wrapping text
+.paragraph('Paragraph text, or a bunch of paragraphs. Text in this style wraps to the edges of the cell nicely. The following
+ line renders a ruler of dash characters:')
+
+// Unordered list
+.<span class="apidocCodeKeywordSpan">list</span>([
+    'List items wrap as well...',
+    '...and are preceded by a list bullet'
+])
+
+// Simple table of key/value pairs
+.keyValue({
+    'Method': 'ui.keyValue()',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.renderHelper.paragraph" id="apidoc.element.interfais.renderHelper.paragraph">
+        function <span class="apidocSignatureSpan">interfais.renderHelper.</span>paragraph
+        <span class="apidocSignatureSpan">(text, formatting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paragraph = function (text, formatting) {
+		var width = this.getContentWidth();
+
+		if (!(typeof text === 'object' &amp;&amp; text.length))
+			text = [text];
+
+		text = text.reduce(function (previousValue, currentValue) {
+			return previousValue.concat(
+				(typeof currentValue === 'string' || typeof currentValue === 'number')
+					? stringHelper.format(formatting || {}, wordwrap(0, width, { mode: 'hard' })('' + currentValue)).split('\n')
+					: currentValue
+			);
+		}, []);
+
+		return text;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// One row and two columns offset between UI bg and ASCII content/foreground
+.padding(1, 2)
+
+// Uppercased and underlined
+.h1('Page header, its pretty prominent')
+
+// Wrapping text
+.<span class="apidocCodeKeywordSpan">paragraph</span>('Paragraph text, or a bunch of paragraphs. Text in this style wraps to
+ the edges of the cell nicely. The following line renders a ruler of dash characters:')
+
+// Unordered list
+.list([
+    'List items wrap as well...',
+    '...and are preceded by a list bullet'
+])
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.renderHelper.ruler" id="apidoc.element.interfais.renderHelper.ruler">
+        function <span class="apidocSignatureSpan">interfais.renderHelper.</span>ruler
+        <span class="apidocSignatureSpan">(char)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ruler = function (char) {
+		return [stringHelper.fill(this.getContentWidth(), char)];
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.keyValue({
+    'Method': 'ui.keyValue()',
+    'Purpose': 'To present key/value pairs, kind of like a definition list',
+    'Arguments': 'An object, or an array of objects describing the key and value'
+})
+
+// Character repeat across view width
+.<span class="apidocCodeKeywordSpan">ruler</span>('-')
+
+// Non-wrapping line
+.line('A line does not wrap')
+
+// Empty line
+.spacer()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.renderHelper.spacer" id="apidoc.element.interfais.renderHelper.spacer">
+        function <span class="apidocSignatureSpan">interfais.renderHelper.</span>spacer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spacer = function () {
+		return [undefined];
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Character repeat across view width
+.ruler('-')
+
+// Non-wrapping line
+.line('A line does not wrap')
+
+// Empty line
+.<span class="apidocCodeKeywordSpan">spacer</span>()
+
+// Underlined
+.h2('Moar advanced')
+
+// Listen to certain lifecycle events
+.on('focus', function() {
+    // Other events are:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.interfais.stringHelper" id="apidoc.module.interfais.stringHelper">module interfais.stringHelper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.stringHelper.fill" id="apidoc.element.interfais.stringHelper.fill">
+        function <span class="apidocSignatureSpan">interfais.stringHelper.</span>fill
+        <span class="apidocSignatureSpan">(length, char)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fill(length, char) {
+	if (!char)
+		char = ' ';
+
+	var string = '';
+
+	while (string.length &lt; length)
+		string = string + char;
+
+	return string.substr(0, length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var prerender = {
+
+	spacer: function () {
+		return [undefined];
+	},
+
+	ruler: function (char) {
+		return [stringHelper.<span class="apidocCodeKeywordSpan">fill</span>(this.getContentWidth(), char)];
+	},
+
+	line: function (lines) {
+		if (!(typeof lines === 'object' &amp;&amp; lines.length))
+			lines = [lines];
+
+		var width = this.getContentWidth();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.stringHelper.format" id="apidoc.element.interfais.stringHelper.format">
+        function <span class="apidocSignatureSpan">interfais.stringHelper.</span>format
+        <span class="apidocSignatureSpan">(options, text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function format(options, text) {
+	var str = '';
+
+	Object.keys(FORMATTING_FLAGS).forEach(function (formattingFlag) {
+		if (!options[formattingFlag])
+			return;
+		str = str + FORMATTING_FLAGS[formattingFlag][0];
+	});
+
+	if (!text)
+		text = options.text;
+
+	if (options.uppercase)
+		text = text.toUpperCase();
+
+	str = str + text;
+
+	Object.keys(FORMATTING_FLAGS).reverse().forEach(function (formattingFlag) {
+		if (!options[formattingFlag])
+			return;
+		str = str + FORMATTING_FLAGS[formattingFlag][1];
+	});
+
+	return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		return pairs.reduce(function (pairLines, pair) {
+			var linesInWrappedValue = wordwrap(0, valueWidth, { mode: 'hard' })('' + pair.value).split('\n');
+
+			return pairLines.concat(linesInWrappedValue.map(function (line, i) {
+				var str = '';
+				if(i === 0)
+					str += stringHelper.<span class="apidocCodeKeywordSpan">format</span>(keyFormatting, pair.key + stringHelper.fill(keyWidth -
+pair.key.length) + seperatorString);
+				else
+					str += stringHelper.fill(keyWidth + seperatorWidth);
+
+				str += line;
+
+				return str;
+			}));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.interfais.stringHelper.resize" id="apidoc.element.interfais.stringHelper.resize">
+        function <span class="apidocSignatureSpan">interfais.stringHelper.</span>resize
+        <span class="apidocSignatureSpan">(string, length, padding, alignRight, clip)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resize(string, length, padding, alignRight, clip) {
+	// If  a padding string is specified, use it.f it's false, do not pad, and else use normal spaces.
+	padding = padding &amp;&amp; padding.length ? padding : (padding === false ? false : ' ' );
+
+	// Use clip setting if it was explicitly set to true or false, else use the opposite of padding
+	clip = clip === !!clip ? clip : !padding;
+
+	if (string.length === length)
+	// Take a bow and exit early
+		return string;
+
+	if (string.length &gt; length)
+	// Return the string or a clipped version (taking alignment into account)
+		return !clip ? string : string.substr(alignRight ? (string.length - length) : 0, length);
+
+	if (padding !== false &amp;&amp; string.length &lt; length)
+	// If the string is not long enough, pad on appropriate side
+		string = alignRight ? fill(length - string.length, padding) + string : string + fill(length - string.length, padding);
+
+	return string;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+function renderRectangle(boundingBox, color) {
+	paint.setBackground(color);
+
+	for (var i = 0; i &lt; boundingBox.height; i++)
+		charm
+			.position(boundingBox.x + 1, boundingBox.y + i)
+			.write(stringHelper.<span class="apidocCodeKeywordSpan">resize</span>('', boundingBox.width, true));
+
+
+	return this;
+}
+
+
+/**
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
